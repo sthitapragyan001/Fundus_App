@@ -41,26 +41,6 @@
             android:src="@android:drawable/ic_menu_rotate"
             app:tint="@android:color/black" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/refresh_button"
-            android:layout_centerVertical="true"
-            android:orientation="horizontal">
-
-            <Switch
-                android:id="@+id/switch1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LED 1" />
-
-            <Switch
-                android:id="@+id/switch2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LED 2" />
-        </LinearLayout>
-
         <ImageView
             android:id="@+id/connection_status_icon"
             android:layout_width="24dp"
@@ -112,69 +92,63 @@
             android:layout_weight="1" />
     </LinearLayout>
 
-    <!-- Initial view with Image, Title, and Connect Button -->
-    <LinearLayout
-        android:id="@+id/initial_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone"
-        tools:visibility="visible">
-
-        <ImageView
-            android:id="@+id/logo_image"
-            android:layout_width="350dp"
-            android:layout_height="350dp"
-            android:layout_marginBottom="10dp"
-            android:src="@mipmap/ic_launcher_foreground"
-            tools:src="@tools:sample/avatars" />
-
-        <TextView
-            android:id="@+id/title_text"
+        <LinearLayout
+            android:id="@+id/initial_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fundus Imager"
-            android:textColor="@android:color/black"
-            android:textSize="34sp"
-            android:textStyle="bold" />
+            android:gravity="center"
 
-        <TextClock
-            android:id="@+id/time_clock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:format12Hour="h:mm a"
-            android:format24Hour="HH:mm"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/ic_launcher_foreground"
+                tools:src="@tools:sample/avatars" />
 
-        <TextClock
-            android:id="@+id/date_clock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:format12Hour="EEEE, MMMM d"
-            android:format24Hour="EEEE, MMMM d"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="34sp"
+                android:textStyle="bold" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/connect_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="32dp"
-            android:paddingTop="16dp"
-            android:paddingRight="32dp"
-            android:paddingBottom="16dp"
-            android:text="Connect to Device"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            app:backgroundTint="#2196F3"
-            app:cornerRadius="28dp" />
-    </LinearLayout>
+            <TextClock
+                android:id="@+id/time_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:format12Hour="h:mm a"
+                android:format24Hour="HH:mm"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextClock
+                android:id="@+id/date_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:format12Hour="EEEE, MMMM d"
+                android:format24Hour="EEEE, MMMM d"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/connect_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingTop="16dp"
+                android:paddingRight="32dp"
+                android:paddingBottom="16dp"
+                android:text="Connect to Device"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:backgroundTint="#2196F3"
+                app:cornerRadius="28dp" />
+        </LinearLayout>
 
     <!-- Connecting/Loading View -->
     <LinearLayout

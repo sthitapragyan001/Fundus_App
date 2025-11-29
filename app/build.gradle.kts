@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.fundusapp.latest"
+    namespace = "com.example.cancerimager"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.fundusapp.latest"
+        applicationId = "com.example.fundusapp"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -35,7 +35,6 @@ dependencies {
 
     implementation(libs.appcompat)
     implementation(libs.material)
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
