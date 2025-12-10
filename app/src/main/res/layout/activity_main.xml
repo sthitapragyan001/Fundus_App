@@ -41,6 +41,17 @@
             android:src="@android:drawable/ic_menu_rotate"
             app:tint="@android:color/black" />
 
+        <ImageButton
+            android:id="@+id/gallery_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@id/refresh_button"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Gallery"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:tint="@android:color/black" />
+
         <ImageView
             android:id="@+id/connection_status_icon"
             android:layout_width="24dp"
@@ -92,11 +103,21 @@
             android:layout_weight="1" />
     </LinearLayout>
 
+    <!-- Scrollable Initial View -->
+    <ScrollView
+        android:id="@+id/initial_view_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android.fillViewport="true"
+        tools:visibility="visible">
+
         <LinearLayout
             android:id="@+id/initial_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/logo_image"
@@ -110,6 +131,7 @@
                 android:id="@+id/title_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Cancer Imager"
                 android:textColor="@android:color/black"
                 android:textSize="34sp"
                 android:textStyle="bold" />
@@ -149,6 +171,7 @@
                 app:backgroundTint="#2196F3"
                 app:cornerRadius="28dp" />
         </LinearLayout>
+    </ScrollView>
 
     <!-- Connecting/Loading View -->
     <LinearLayout

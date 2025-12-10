@@ -177,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
         Button retryButton = findViewById(R.id.retry_button);
         ImageButton homeButton = findViewById(R.id.home_button);
         ImageButton refreshButton = findViewById(R.id.refresh_button);
+        ImageButton galleryButton = findViewById(R.id.gallery_button);
 
         retryButton.setOnClickListener(v -> handleConnectClick());
         connectButton.setOnClickListener(v -> handleConnectClick());
@@ -187,6 +188,11 @@ public class MainActivity extends AppCompatActivity {
                 // webView2.reload();
                 Toast.makeText(MainActivity.this, "Refreshing streams...", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        galleryButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, GalleryActivity.class);
+            startActivity(intent);
         });
     }
 
